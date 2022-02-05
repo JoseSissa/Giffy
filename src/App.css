@@ -1,0 +1,9 @@
+.App {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 5px;
+  box-sizing: border-box;
+  background-color: #282c34;
+  color: white;
+}

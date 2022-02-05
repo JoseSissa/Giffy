@@ -1,0 +1,17 @@
+:root {
+    --result-columns: 2;
+}
+.gallery {
+    column-count: var(--result-columns);
+    column-gap: 8px;
+}
+@media (min-width: 600px) {
+    :root {
+        --result-columns: 3;
+    }
+}
+@media (min-width: 1024px) {
+    :root {
+        --result-columns: 4;
+    }
+}

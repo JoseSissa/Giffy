@@ -1,0 +1,36 @@
+header {
+    width: 100%;
+    height: 150px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:azure;
+}
+.logo {
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    margin-bottom: 30px;
+    background-image: url('../../../public/logo.JPG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.searcher {
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+.searcher input {
+    width: 90%;
+    max-width: 900px;
+    height: 35px;
+    box-sizing: border-box;
+    padding: 0 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    box-shadow: 0 1px 8px black;
+}
