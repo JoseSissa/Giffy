@@ -3,9 +3,6 @@ import { Gif } from '../gif/gif';
 import './listofGifs.css';
 
 const ListofGifs = ({ gifs }) => {
-    
-    // const { keyword } = params;
-    // const { gifs } = useGifs({ keyword });
 
     return (
         <div className='gallery'>
