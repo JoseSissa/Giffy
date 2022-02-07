@@ -1,17 +1,19 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { getGifs } from "../services/getGifs";
+import { ContextGifs } from "../context/GifsContext";
 
-const useGifs = ({ keyword } = { keyword:'mapache'})=> {
-    const [gifs, setGifs] = useState([]);
+const useGifs = ({ keyword } = { keyword: null })=> {
+
+    const {gifs, setGifs} = useContext(ContextGifs);
     
-    localStorage.setItem('lastKeyword', keyword);
-
     useEffect(()=> {
-        getGifs({ keyword })
-            .then(gifs => setGifs(gifs));        
-    }, [keyword]);
+        const keywordToUse = keyword || localStorage.getItem('lastKeyword') || 'random';
+        getGifs({ keyword: keywordToUse })
+            .then(gifs => setGifs(gifs));     
+                localStorage.setItem('lastKeyword', keywordToUse);   
+    }, [keyword, setGifs]);
 
-    return { gifs }
+    return { gifs };
 };
 
 export { useGifs };
